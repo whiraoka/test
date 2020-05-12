@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="Shift_JIS">
+<title>e2R PRO</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/ja/e2r_common/e2r_pro/assets/admin-lte/css/AdminLTE.min.css" />
+<link rel="stylesheet" href="/ja/e2r_common/e2r_pro/assets/css/style.css" />
+<style>
+.menuarea > ul { display:none; }
+</style>
+<script src="/export/ja/wjwest_ibase/images/wjwest_ibase_parameter.js" charset="UTF-8"></script>
+</head>
+<body>
+<div id="menu">
+<div id="company_v3">wjwest_ibase<br /><script>document.write(companyName);</script></div>
+
+<e2r>
+<e2share site="wjwest_ibase_members" id="1" max="1" search="off">
+<condition key="user_id" value="@##user_id@" />
+<condition key="mb_user_shubetsu" value="人事部" />
+<body-format1>
+<!-- 人事部メニュー -->
+<div class="menuarea">
+<h2><i class="fa fa-align-justify"></i>基本設定</h2>
+<h3><i class="fa fa-gear"></i>初期設定</h3>
+<ul class="pre_entry"></ul>
+<h3><i class="fa fa-folder-open"></i>マニュアル／各種テンプレート</h3>
+<ul>
+<point id="1200" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">ユーザーマニュアル</a></li>
+</point-format1></point>
+<point id="1100" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">各種テンプレート</a></li>
+</point-format1></point>
+</ul>
+<h2><i class="fa fa-align-justify"></i>応募者管理</h2>
+<h3><i class="fa fa-search"></i>応募者検索</h3>
+<ul>
+<point id="10080" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">オリジナル検索</a></li>
+</point-format1></point>
+<point id="10090" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">MY検索</a></li>
+</point-format1></point>
+<point id="10000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">新規検索</a></li>
+</point-format1></point>
+<point id="21" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@condition/ConditionViewCategoryList" target="main">表示項目設定</a></li>
+</point-format1></point>
+</ul>
+
+<h3><i class="fa fa-user"></i>応募者情報管理</h3>
+<ul>
+<point id="21" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@item/ItemCategoryList" target="main">個人情報項目設定</a></li>
+</point-format1></point>
+<point id="21" max="1" key="D" order="2"><point-format1>
+<li>ダウンロード
+	<ul>
+		<li><a href="@$$link_url@psdownload/PSDLFormatCategoryList" target="main">フォーマット設定</a></li>
+		<li><a href="@$$link_url@securecabinet/SecureDownload" target="main">全件CSVダウンロード実行</a></li>
+		<li><a href="@$$link_url@securecabinet/SecureCabinetList?category_id=" target="main">全件CSVダウンロード一覧</a></li>
+	</ul>
+</li>
+<li>追加アップロード
+	<ul>
+		<li><a href="@$$link_url@psupload/PSADDULFormatCategoryList" target="main">追加アップロード設定</a></li>
+		<li><a href="@$$link_url@psupload/PSADDULCategoryList" target="main">追加アップロード実行</a></li>
+	</ul>
+</li>
+<li>更新アップロード
+	<ul>
+		<li><a href="@$$link_url@psupload/PSUPDULFormatCategoryList" target="main">更新アップロード設定</a></li>
+		<li><a href="@$$link_url@psupload/PSUPDULExec" target="main">更新アップロード実行</a></li>
+	</ul>
+</li>
+</point-format1></point>
+</ul>
+
+<h3><i class="fa fa-envelope-o"></i>メール送信設定</h3>
+<ul>
+<point id="11100" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メールテンプレート設定</a></li>
+</point-format1></point>
+<point id="11200" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">一括メール送信履歴</a></li>
+</point-format1></point>
+</ul>
+
+<h3><i class="fa fa-users"></i>学内・合説管理</h3>
+<ul>
+<point id="20000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">学内・合説設定</a></li>
+</point-format1></point>
+</ul>
+<h3><i class="fa fa-pencil"></i>アンケート設定</h3>
+<ul class="sheet">
+<li>一括設定
+	<ul>
+<point id="21010" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">アンケートメニュー表示設定</a></li>
+</point-format1></point>
+<point id="21011" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">アンケート提出時自動公開設定</a></li>
+</point-format1></point>
+	</ul>
+</li>
+</ul>
+<h3><i class="fa fa-pencil"></i>適性検査設定</h3>
+<ul class="test"></ul>
+<h3><i class="fa fa-calendar"></i>説明会設定</h3>
+<ul class="event">
+<li>一括設定
+	<ul>
+<point id="30010" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">説明会メニュー表示設定</a></li>
+</point-format1></point>
+<point id="30011" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">説明会予約票表示設定</a></li>
+</point-format1></point>
+<point id="30012" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">説明会予約時自動公開設定</a></li>
+</point-format1></point>
+<point id="30040" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">説明会日程一括設定</a></li>
+</point-format1></point>
+<point id="30020" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">タイムテーブル設定</a></li>
+</point-format1></point>
+<point id="30030" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">会場設定</a></li>
+</point-format1></point>
+<point id="21" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@batch/BatchScheduleList" target="main">リマインドメール設定</a></li>
+		<li><a href="@$$link_url@event/ESDLSet" target="main">イベント設定ダウンロード</a></li>
+		<li><a href="@$$link_url@event/ESULSet" target="main">イベント追加アップロード</a></li>
+		<li><a href="@$$link_url@event/ESULUpdateSet" target="main">イベント更新アップロード</a></li>
+		<li><a href="@$$link_url@html/FileList?file_type=1&amp;category_id=2" target="main">画像キャビネット</a></li>
+</point-format1></point>
+	</ul>
+</li>
+</ul>
+<h3><i class="fa fa-calendar"></i>選考会設定</h3>
+<ul class="selection">
+<li>一括設定
+	<ul>
+<point id="40010" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">選考会メニュー表示設定</a></li>
+</point-format1></point>
+<point id="40011" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">選考会予約票表示設定</a></li>
+</point-format1></point>
+<point id="40012" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">選考会予約時自動公開設定</a></li>
+</point-format1></point>
+<point id="40060" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">選考会日程一括設定</a></li>
+</point-format1></point>
+<point id="40040" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">タイムテーブル設定</a></li>
+</point-format1></point>
+<point id="40050" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">会場設定</a></li>
+</point-format1></point>
+<point id="21" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@batch/BatchScheduleList" target="main">リマインドメール設定</a></li>
+		<li><a href="@$$link_url@event/ESDLSet" target="main">イベント設定ダウンロード</a></li>
+		<li><a href="@$$link_url@event/ESULSet" target="main">イベント追加アップロード</a></li>
+		<li><a href="@$$link_url@event/ESULUpdateSet" target="main">イベント更新アップロード</a></li>
+		<li><a href="@$$link_url@html/FileList?file_type=1&amp;category_id=2" target="main">画像キャビネット</a></li>
+</point-format1></point>
+	</ul>
+</li>
+</ul>
+<!--h3><I class="fa fa-envelope-o"></i>帳票管理</h3>
+<ul>
+<li><a href="#" target="main">PDF帳票アップロード</a></li>
+</ul-->
+<h3><i class="fa fa-desktop"></i>マイページ画面設定</h3>
+<ul class="mypage">
+<li>一括設定
+	<ul>
+<point id="23020" max="1" key="D" order="2"><point-format1>
+		<li><a href="@$$link_url@" target="main">フリーコンテンツメニュー表示設定</a></li>
+</point-format1></point>
+	</ul>
+</li>
+</ul>
+<h3><i class="fa fa-gears"></i>管理機能</h3>
+<ul>
+<point id="3000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">ファイル共有</a></li>
+</point-format1></point>
+<point id="21" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@personal/RepeatUserList" target="main">重複ユーザーリスト</a></li>
+</point-format1></point>
+<point id="4100" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">退会済ユーザーリスト</a></li>
+</point-format1></point>
+</ul>
+<h3><i class="fa fa-line-chart"></i>集計・レポート</h3>
+<ul>
+<point id="12000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">集計・レポート確認</a></li>
+</point-format1></point>
+<point id="11300" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">集計フォーマット設定</a></li>
+</point-format1></point>
+<point id="3300" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">ダッシュボード表示設定</a></li>
+</point-format1></point>
+</ul>
+<h3><i class="fa fa-commenting"></i>応募者問い合せ対応</h3>
+<ul>
+<point id="5000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="_blank">応募者問い合せ対応</a></li>
+</point-format1></point>
+</ul>
+
+<h2><i class="fa fa-align-justify"></i>社員管理</h2>
+<break-format type="first"><break-match-format>
+<point id="51000" max="1" key="D" order="2"><point-format1>
+<h3><i class="fa fa-building"></i>リクルーター機能</h3>
+<![CDATA[<ul>]]>
+</point-format1></point>
+</break-match-format></break-format>
+<point id="51000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">新規登録</a></li>
+</point-format1></point>
+<point id="51100" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">リクルーター検索・メール送信</a></li>
+</point-format1></point>
+<point id="51200" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メールテンプレート設定</a></li>
+</point-format1></point>
+<point id="51300" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メール送信履歴</a></li>
+</point-format1></point>
+<point id="51400" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">リクルーター資料BOX設定</a></li>
+</point-format1></point>
+<point id="51010" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">リクルーター権限設定</a></li>
+</point-format1></point>
+<condition-format key="recruiter_flg" value=""><condition-no-match-format>
+<point id="2000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="_blank">リクルーター画面表示</a></li>
+</point-format1></point>
+</condition-no-match-format></condition-format>
+<break-format type="first"><break-match-format>
+<point id="51000" max="1" key="D" order="2"><point-format1>
+<![CDATA[</ul>]]>
+</point-format1></point>
+<point id="52000" max="1" key="D" order="2"><point-format1>
+<h3><i class="fa fa-building"></i>面接官機能</h3>
+<![CDATA[<ul>]]>
+</point-format1></point>
+</break-match-format></break-format>
+<point id="52000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">新規登録</a></li>
+</point-format1></point>
+<point id="52100" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">面接官検索・メール送信</a></li>
+</point-format1></point>
+<point id="52200" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メールテンプレート設定</a></li>
+</point-format1></point>
+<point id="52300" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メール送信履歴</a></li>
+</point-format1></point>
+<point id="52400" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">面接官資料BOX設定</a></li>
+</point-format1></point>
+<point id="52010" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">面接官権限設定</a></li>
+</point-format1></point>
+<condition-format key="interviewer_flg" value=""><condition-no-match-format>
+<point id="2000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="_blank">面接官画面表示</a></li>
+</point-format1></point>
+</condition-no-match-format></condition-format>
+<break-format type="first"><break-match-format>
+<point id="52000" max="1" key="D" order="2"><point-format1>
+<![CDATA[</ul>]]>
+</point-format1></point>
+</break-match-format></break-format>
+<h3><i class="fa fa-building"></i>人事担当管理</h3>
+<ul>
+<point id="50000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">新規登録</a></li>
+</point-format1></point>
+<point id="50100" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">人事担当検索・メール送信</a></li>
+</point-format1></point>
+<point id="50200" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メールテンプレート設定</a></li>
+</point-format1></point>
+<point id="50300" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メール送信履歴</a></li>
+</point-format1></point>
+<point id="50010" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">人事担当権限設定</a></li>
+</point-format1></point>
+</ul>
+<h3><i class="fa fa-building"></i>エージェント担当管理</h3>
+<ul>
+<point id="53020" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">エージェント会社名設定</a></li>
+</point-format1></point>
+<point id="53000" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">新規登録</a></li>
+</point-format1></point>
+<point id="53100" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">エージェント検索・メール送信</a></li>
+</point-format1></point>
+<point id="53200" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メールテンプレート設定</a></li>
+</point-format1></point>
+<point id="53300" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">メール送信履歴</a></li>
+</point-format1></point>
+<point id="53400" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">エージェント資料BOX設定</a></li>
+</point-format1></point>
+<point id="53010" max="1" key="D" order="2"><point-format1>
+<li><a href="@$$link_url@" target="main">エージェント権限設定</a></li>
+</point-format1></point>
+</ul>
+</div>
+</body-format1>
+</e2share>
+</e2r>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/ja/e2r_common/e2r_pro/assets/js/e2rpro_v3.js" charset="UTF-8"></script>
+<script>
+var sheetMenu = new Object();
+var eventMenu = new Object();
+var selectionMenu = new Object();
+var contentsMenu = new Object();
+<e2r><e2share site="wjwest_ibase_data" id="57" max="1" search="off">
+<condition key="menu_shubetsu" value="アンケート" /><condition key="data_hi_kensaku_kubun" value="@##mb_kensaku_kubun@" /><sort priority="1" key="personal_insert_time" order="2" />
+<body-format1>sheetMenu = { user_id:'@$$user_id@', menu_use_kbn:['@$$menu_use_kbn01@','@$$menu_use_kbn02@','@$$menu_use_kbn03@','@$$menu_use_kbn04@','@$$menu_use_kbn05@','@$$menu_use_kbn06@','@$$menu_use_kbn07@','@$$menu_use_kbn08@','@$$menu_use_kbn09@','@$$menu_use_kbn10@','@$$menu_use_kbn11@','@$$menu_use_kbn12@','@$$menu_use_kbn13@','@$$menu_use_kbn14@','@$$menu_use_kbn15@','@$$menu_use_kbn16@','@$$menu_use_kbn17@','@$$menu_use_kbn18@','@$$menu_use_kbn19@','@$$menu_use_kbn20@'] };</body-format1>
+</e2share><e2share site="wjwest_ibase_data" id="57" max="1" search="off">
+<condition key="menu_shubetsu" value="説明会" /><condition key="data_hi_kensaku_kubun" value="@##mb_kensaku_kubun@" /><sort priority="1" key="personal_insert_time" order="2" />
+<body-format1>eventMenu = { user_id:'@$$user_id@', menu_use_kbn:['@$$menu_use_kbn01@','@$$menu_use_kbn02@','@$$menu_use_kbn03@','@$$menu_use_kbn04@','@$$menu_use_kbn05@','@$$menu_use_kbn06@','@$$menu_use_kbn07@','@$$menu_use_kbn08@','@$$menu_use_kbn09@','@$$menu_use_kbn10@','@$$menu_use_kbn11@','@$$menu_use_kbn12@','@$$menu_use_kbn13@','@$$menu_use_kbn14@','@$$menu_use_kbn15@','@$$menu_use_kbn16@','@$$menu_use_kbn17@','@$$menu_use_kbn18@','@$$menu_use_kbn19@','@$$menu_use_kbn20@'] };</body-format1>
+</e2share><e2share site="wjwest_ibase_data" id="57" max="1" search="off">
+<condition key="menu_shubetsu" value="選考会" /><condition key="data_hi_kensaku_kubun" value="@##mb_kensaku_kubun@" /><sort priority="1" key="personal_insert_time" order="2" />
+<body-format1>selectionMenu = { user_id:'@$$user_id@', menu_use_kbn:['@$$menu_use_kbn01@','@$$menu_use_kbn02@','@$$menu_use_kbn03@','@$$menu_use_kbn04@','@$$menu_use_kbn05@','@$$menu_use_kbn06@','@$$menu_use_kbn07@','@$$menu_use_kbn08@','@$$menu_use_kbn09@','@$$menu_use_kbn10@','@$$menu_use_kbn11@','@$$menu_use_kbn12@','@$$menu_use_kbn13@','@$$menu_use_kbn14@','@$$menu_use_kbn15@','@$$menu_use_kbn16@','@$$menu_use_kbn17@','@$$menu_use_kbn18@','@$$menu_use_kbn19@','@$$menu_use_kbn20@'] };</body-format1>
+</e2share><e2share site="wjwest_ibase_data" id="57" max="1" search="off">
+<condition key="menu_shubetsu" value="フリーコンテンツ" /><condition key="data_hi_kensaku_kubun" value="@##mb_kensaku_kubun@" /><sort priority="1" key="personal_insert_time" order="2" />
+<body-format1>contentsMenu = { user_id:'@$$user_id@', menu_use_kbn:['@$$menu_use_kbn01@','@$$menu_use_kbn02@','@$$menu_use_kbn03@','@$$menu_use_kbn04@','@$$menu_use_kbn05@','@$$menu_use_kbn06@','@$$menu_use_kbn07@','@$$menu_use_kbn08@','@$$menu_use_kbn09@','@$$menu_use_kbn10@','@$$menu_use_kbn11@','@$$menu_use_kbn12@','@$$menu_use_kbn13@','@$$menu_use_kbn14@','@$$menu_use_kbn15@','@$$menu_use_kbn16@','@$$menu_use_kbn17@','@$$menu_use_kbn18@','@$$menu_use_kbn19@','@$$menu_use_kbn20@'] };</body-format1>
+</e2share></e2r>
+</script>
+<e2r><point id="8" key="D" order="2" max="1"><point-format1><script src="@$$link_url@" charset="UTF-8"></script></point-format1></point></e2r>
+<script>
+$(document).ready(function(){
+//	$("#company").html(companyName);
+	MENU_CONFIG.setMenu();
+	// イベント表示名称取得
+	getEventInfo();
+
+	// メニュー制御
+	$("h3").click(function(){
+		$(this).next("ul").slideToggle();
+		$(this).toggleClass("opened");
+	});
+});
+
+// イベント表示名称取得
+function getEventInfo(){
+	$.ajax({
+		type: 'GET',
+		url: '<e2r><point id="6" key="D" order="2" max="1"><point-format1>@$$link_url@</point-format1></point></e2r>',
+		dataType: 'json'
+	}).done(function(data){
+		setEventInfo(data);
+	}).fail(function(){
+		alert('エラーが発生しました。');
+	});
+}
+
+function setEventInfo(data){
+	$("ul.event>li, ul.selection>li").each(function(){
+		var name = $(this).attr("category_nm");
+		for(var i=0; i<data.event_info.length; i++){
+			if(data.event_info[i].event_category_nm == name){
+				$(this).find("span.dsp_nm").html(data.event_info[i].event_category_dsp_nm);
+				return;
+			}
+		}
+	});
+}
+</script>
+
+</body>
+</html>
