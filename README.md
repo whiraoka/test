@@ -1,5 +1,5 @@
 # test
 テスト
 
-windows test
+windows test2
 mac test
