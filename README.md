@@ -2,3 +2,4 @@
 テスト
 
 windows test
+mac test
